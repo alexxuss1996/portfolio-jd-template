@@ -1,18 +1,20 @@
 // USER VARIABLES SECTION
 
-$accent: orange; // Accent Color
 $fontsize: 16px; // Body Font Size
-$textcolor: #333; // Text Color
+$website-width: 1280px;
+$main-color: #ffbc00;
+$light-color: #f4f4f4;
+$medium-color: #ccc;
+$dark-color: #333; // Text Color
 $system: -apple-system,
 BlinkMacSystemFont,
 Arial,
 sans-serif; // System Font Family
+$bg-image: url('../images/dest/showcase.jpg');
 
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 20px;
 $gutter: $grid-gutter-width;
-
-
 
 // FONTS LOAD SECTION
 
@@ -36,7 +38,7 @@ $gutter: $grid-gutter-width;
 }
 
 ::selection {
-	background-color: $accent;
+	background-color: $main-color;
 	color: #fff;
 }
 
@@ -54,11 +56,31 @@ textarea {
 }
 
 body {
-	font-family: $system;
+	font-family: 'Dosis', sans-serif;
 	font-size: $fontsize;
 	min-width: 320px;
 	position: relative;
 	line-height: 1.6;
 	overflow-x: hidden;
-	color: $textcolor;
+	color: $dark-color;
+	background-color: #fff;
+}
+
+a {
+	text-decoration: none;
+	color: $dark-color;
+}
+
+ul {
+	list-style: none;
+}
+
+h1,
+h2,
+h3 {
+	text-transform: uppercase;
+}
+
+img {
+	width: 100%;
 }
