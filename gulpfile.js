@@ -44,6 +44,8 @@ const imagemin = require('gulp-imagemin');
 const newer = require('gulp-newer');
 const del = require('del');
 const htmlmin = require('gulp-htmlmin');
+const babel = require('gulp-babel');
+const sourcemaps = require('gulp-sourcemaps');
 
 function browsersync() {
   browserSync.init({
@@ -55,8 +57,13 @@ function browsersync() {
 
 function scripts() {
   return src(paths.scripts.src)
+    .pipe(sourcemaps.init())
     .pipe(concat(paths.jsOutputName))
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
     .pipe(uglify())
+    .pipe(sourcemaps.write('.'))
     .pipe(dest(paths.scripts.dest))
     .pipe(browserSync.stream());
 }
