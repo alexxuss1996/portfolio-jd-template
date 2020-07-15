@@ -14,7 +14,7 @@ sans-serif; // System Font Family
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 20px;
 $gutter: $grid-gutter-width;
-
+$line-width: 30px;
 // FONTS LOAD SECTION
 
 @mixin font($fname, $fstyle, $fweight, $furl) {
