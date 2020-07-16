@@ -62,8 +62,6 @@ img {
 		.header-content {
 			text-align: center;
 			padding: 8% 0;
-			position: relative;
-			z-index: 2;
 
 			h1 {
 				font-size: 4rem;
@@ -79,8 +77,6 @@ img {
 	display: flex;
 	justify-content: space-between;
 	padding-top: 1rem;
-	position: relative;
-	z-index: 2;
 
 	ul {
 		display: flex;
@@ -109,6 +105,11 @@ img {
 	}
 }
 
+#header-home>* {
+	position: relative;
+	z-index: 2;
+}
+
 .section-title {
 	position: relative;
 	display: inline-block;
@@ -129,12 +130,45 @@ img {
 	&-a {
 		.specials {
 			display: grid;
-			grid-gap: 1rem;
 			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 1rem;
 			margin-top: 3rem;
 
 			.fas {
 				color: $main-color;
+			}
+		}
+	}
+
+	&-b {
+		.stats {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+
+
+			&-item {
+				padding-top: 1rem;
+
+				&:nth-child(odd) {
+					background-color: $medium-color;
+				}
+
+				&:nth-child(even) {
+					background-color: $light-color;
+				}
+			}
+
+			li {
+				line-height: 2;
+
+				&.stats-title {
+					font-size: 1.5rem;
+				}
+
+				&.stats-number {
+					font-size: 2rem;
+					font-weight: bold;
+				}
 			}
 		}
 	}
