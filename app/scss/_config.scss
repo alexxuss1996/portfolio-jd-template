@@ -14,7 +14,7 @@ sans-serif; // System Font Family
 // Bootstrap compatible gutter variable => $gutter
 $grid-gutter-width: 20px;
 $gutter: $grid-gutter-width;
-$line-width: 30px;
+$line-width: 3rem;
 // FONTS LOAD SECTION
 
 @mixin font($fname, $fstyle, $fweight, $furl) {
@@ -24,6 +24,17 @@ $line-width: 30px;
 		font-weight: $fweight;
 		// font-display: swap; // Uncomment to initially display system fonts
 		src: local($fname), url($furl) format('woff2');
+	}
+}
+
+@function set-text-color($color) {
+	@if(lightness($color) < 50) {
+		@return #fefefe;
+	}
+
+	@else {
+		@return #111;
+
 	}
 }
 
