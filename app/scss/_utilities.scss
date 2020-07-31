@@ -139,3 +139,15 @@ input[class^="btn-"]:hover {
 		background-color: $main-color;
 	}
 }
+
+@function set-text-color($color) {
+	@if(lightness($color) > 50) {
+
+		@return #333;
+	}
+
+	@else {
+
+		@return #fff;
+	}
+}

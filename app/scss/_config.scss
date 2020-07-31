@@ -27,17 +27,6 @@ $line-width: 3rem;
 	}
 }
 
-@function set-text-color($color) {
-	@if(lightness($color) < 50) {
-		@return #fefefe;
-	}
-
-	@else {
-		@return #111;
-
-	}
-}
-
 // Include font example: 
 // @include font('Roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2');
 

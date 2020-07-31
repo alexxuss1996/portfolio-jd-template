@@ -168,7 +168,7 @@ img {
 				position: relative;
 				background-color: $dark-color;
 				border-radius: 50%;
-				color: #fff;
+				color: set-text-color($dark-color);
 				padding: 2rem;
 				width: 70px;
 				height: 70px;
@@ -189,6 +189,15 @@ img {
 				}
 			}
 
+			&-item {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				p {
+					margin-top: auto;
+				}
+			}
+
 			&-step {
 				font-size: 1.75rem;
 				position: absolute;
@@ -201,6 +210,41 @@ img {
 				border-radius: 50%;
 				padding: 1rem;
 				transition: all 0.5s;
+			}
+		}
+	}
+}
+
+#main-footer {
+	color: $light-color;
+	background-color: $dark-color;
+
+	.footer-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		p {
+			font-size: 1rem;
+		}
+
+		.social .fab {
+			font-size: 1rem;
+			color: $light-color;
+			padding: 0.5rem;
+			width: 20px;
+			height: 20px;
+			line-height: 20px;
+			margin: 0.5rem;
+			text-align: center;
+			border: 2px solid #fff;
+			border-radius: 50%;
+			transition: all 0.3s ease;
+
+			&:hover {
+				border-color: $main-color;
+				color: $dark-color;
+				background-color: $main-color;
 			}
 		}
 	}
