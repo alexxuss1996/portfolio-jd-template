@@ -15,6 +15,19 @@ sans-serif; // System Font Family
 $grid-gutter-width: 20px;
 $gutter: $grid-gutter-width;
 $line-width: 3rem;
+
+@function set-text-color($color) {
+	@if(lightness($color) > 50) {
+
+		@return #333;
+	}
+
+	@else {
+
+		@return #fff;
+	}
+}
+
 // FONTS LOAD SECTION
 
 @mixin font($fname, $fstyle, $fweight, $furl) {

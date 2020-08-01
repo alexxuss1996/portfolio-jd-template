@@ -49,14 +49,7 @@ img {
 		position: relative;
 
 		&::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: 1;
-			width: 100%;
-			height: 100%;
-			background-color: rgba($color: #050505, $alpha: 0.6);
+			@extend .header-overlay
 		}
 
 		.header-content {
@@ -71,6 +64,21 @@ img {
 			}
 		}
 	}
+
+	&-inner {
+		background-image: url("../images/dest/showcase-2.jpg");
+		background-size: cover;
+		background-position: 20% 30%;
+		background-repeat: no-repeat;
+		color: #fff;
+		height: 5.5rem;
+		position: relative;
+		border-bottom: 3px solid $main-color;
+
+		&::before {
+			@extend .header-overlay
+		}
+	}
 }
 
 #main-nav {
@@ -80,6 +88,7 @@ img {
 
 	ul {
 		display: flex;
+		margin: 0;
 	}
 
 	li {
@@ -105,9 +114,21 @@ img {
 	}
 }
 
-#header-home>* {
+#header-home>*,
+#header-inner>* {
 	position: relative;
 	z-index: 2;
+}
+
+.header-overlay {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	background-color: rgba($color: #050505, $alpha: 0.6);
 }
 
 #home {
@@ -193,6 +214,7 @@ img {
 				display: flex;
 				flex-direction: column;
 				align-items: center;
+
 				p {
 					margin-top: auto;
 				}
@@ -214,6 +236,60 @@ img {
 		}
 	}
 }
+
+#about {
+	&-a {
+		.about-info {
+			display: grid;
+			grid-gap: 1.2rem;
+			grid-template-areas:
+				"bioimage bio bio"
+				"aw1 aw2 aw3";
+
+			.bio {
+				border-left: 3px solid $main-color;
+				grid-area: bio;
+
+				&-image {
+					grid-area: bioimage;
+				}
+
+				h4 {
+					text-transform: uppercase;
+					font-weight: 500;
+				}
+			}
+
+			.award {
+				&-1 {
+					grid-area: aw1;
+
+					.fas {
+						color: $main-color;
+					}
+				}
+
+				&-2 {
+					grid-area: aw2;
+
+					.fas {
+						color: $main-color;
+					}
+				}
+
+				&-3 {
+					grid-area: aw3;
+
+					.fas {
+						color: $main-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+
 
 #main-footer {
 	color: $light-color;

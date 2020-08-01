@@ -49,6 +49,25 @@ input[class^="btn-"]:hover {
 	background-color: $main-color;
 }
 
+.bg {
+	&-main {
+		background-color: $main-color;
+		color: set-text-color($main-color);
+	}
+	&-light {
+		background-color: $light-color;
+		color: set-text-color($light-color);
+	}
+	&-dark {
+		background-color: $dark-color;
+		color: set-text-color($dark-color);
+	}
+	&-medium {
+		background-color: $medium-color;
+		color: set-text-color($medium-color);
+	}
+}
+
 .py {
 	&-1 {
 		padding: 1rem 0;
@@ -140,14 +159,3 @@ input[class^="btn-"]:hover {
 	}
 }
 
-@function set-text-color($color) {
-	@if(lightness($color) > 50) {
-
-		@return #333;
-	}
-
-	@else {
-
-		@return #fff;
-	}
-}
