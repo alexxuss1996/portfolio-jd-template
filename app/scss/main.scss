@@ -249,6 +249,7 @@ img {
 			.bio {
 				border-left: 3px solid $main-color;
 				grid-area: bio;
+				padding: 0.8rem;
 
 				&-image {
 					grid-area: bioimage;
@@ -260,30 +261,41 @@ img {
 				}
 			}
 
-			.award {
-				&-1 {
-					grid-area: aw1;
+			.award-1 {
+				grid-area: aw1;
+			}
 
-					.fas {
-						color: $main-color;
-					}
-				}
+			.award-2 {
+				grid-area: aw2;
+			}
 
-				&-2 {
-					grid-area: aw2;
+			.award-3 {
+				grid-area: aw3;
+			}
 
-					.fas {
-						color: $main-color;
-					}
-				}
-
-				&-3 {
-					grid-area: aw3;
-
-					.fas {
-						color: $main-color;
-					}
-				}
+			.award-1 .fas,
+			.award-2 .fas,
+			.award-3 .fas {
+				color: $main-color;
+				margin: 1rem;
+			}
+		}
+	}
+	&-b {
+		text-transform: uppercase;
+		h4 {
+			text-align: left;
+		}
+		.progress {
+			overflow: hidden;
+			height: 20px;
+			border-radius: 4px;
+			background-color: $medium-color;
+			> * {
+				height: 100%;
+				color: #fff;
+				text-align: center;
+				background-color: $main-color;
 			}
 		}
 	}
