@@ -54,14 +54,17 @@ input[class^="btn-"]:hover {
 		background-color: $main-color;
 		color: set-text-color($main-color);
 	}
+
 	&-light {
 		background-color: $light-color;
 		color: set-text-color($light-color);
 	}
+
 	&-dark {
 		background-color: $dark-color;
 		color: set-text-color($dark-color);
 	}
+
 	&-medium {
 		background-color: $medium-color;
 		color: set-text-color($medium-color);
@@ -146,6 +149,7 @@ input[class^="btn-"]:hover {
 	text-align: center;
 	font-size: 2rem;
 	font-weight: 400;
+	margin-top: 0;
 
 	&::after {
 		content: '';
@@ -158,4 +162,3 @@ input[class^="btn-"]:hover {
 		background-color: $main-color;
 	}
 }
-
