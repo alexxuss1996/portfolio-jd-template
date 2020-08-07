@@ -49,6 +49,10 @@ input[class^="btn-"]:hover {
 	background-color: $main-color;
 }
 
+textarea {
+	resize: vertical;
+}
+
 .bg {
 	&-main {
 		background-color: $main-color;
