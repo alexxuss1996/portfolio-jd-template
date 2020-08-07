@@ -282,18 +282,22 @@ img {
 			}
 		}
 	}
+
 	&-b {
 		text-transform: uppercase;
+
 		h4 {
 			text-align: left;
 			margin-bottom: 0.5rem;
 		}
+
 		.progress {
 			overflow: hidden;
 			height: 20px;
 			border-radius: 4px;
 			background-color: $medium-color;
-			> * {
+
+			>* {
 				height: 100%;
 				color: #fff;
 				text-align: center;
@@ -313,6 +317,7 @@ img {
 			}
 		}
 	}
+
 	&-d {
 		.testimonials {
 			display: grid;
@@ -332,8 +337,9 @@ img {
 				border: 1px solid $medium-color;
 				border-radius: 4px;
 				padding: 0.5rem;
-		
+
 			}
+
 			img {
 				object-fit: cover;
 				height: 50px;
@@ -341,6 +347,12 @@ img {
 				border-radius: 50%;
 			}
 		}
+	}
+}
+
+#work {
+	&-a {
+		@import 'item_grid';
 	}
 }
 
