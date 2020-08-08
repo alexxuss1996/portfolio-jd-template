@@ -97,7 +97,8 @@ function buildcopyassets() {
   return src([
     './app/css/**/*.min.css',
     './app/js/**/*.min.js',
-    './app/images/dest/**/*'
+    './app/images/dest/**/*',
+    './app/**/*.ico'
   ], {
     base: baseDir,
   }).pipe(dest(buildDir));
