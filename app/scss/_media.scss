@@ -1,0 +1,145 @@
+/* Desktop First Method */
+
+@media screen and (max-width: 992px) {
+	#header-home {
+		height: 28rem;
+
+		.header-content {
+			padding: 4% 0;
+
+			h1 {
+				font-size: 3rem;
+			}
+
+			p.lead {
+				font-size: 1.1rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+
+	#home-a .specials,
+	#home-b .stats,
+	#home-c .process,
+	#about-d .testimonials,
+	#work-a .items {
+		grid-template-columns: 1fr;
+	}
+
+	#home {
+		&-a {
+			.specials {
+				&-item {
+					border-bottom: 1px solid $light-color;
+					padding: 1rem 0;
+					&:last-child {
+						border: none;
+						padding: 0;
+					}
+				}
+			}
+		}
+	}
+
+	#about-d .testimonials ul {
+		justify-content: center;
+		padding-bottom: 1rem;
+		position: relative;
+		
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			width: 280px;
+			height: 1px;
+			background-color: $light-color;
+		}
+	}
+	#about-a .about-info {
+		grid-template-areas: 
+		"bioimage"
+		"bio"
+		"aw1"
+		"aw2"
+		"aw3"
+		;
+	}
+
+	#contact-a {
+		.text-fields {
+			grid-template-areas:
+				"name"
+				"subject"
+				"email"
+				"phone"
+				"message";
+		}
+		button[type="submit"] {
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	#main-nav {
+		flex-direction: column;
+		align-items: center;
+
+		li {
+			padding: 1rem;
+		}
+	}
+
+	#header {
+		&-home {
+			height: 10rem;
+
+			.header-content {
+				display: none;
+			}
+		}
+
+		&-inner {
+			height: 10rem;
+		}
+	}
+
+	#about-c {
+		display: none;
+	}
+
+	#contact-b .contact-info {
+		flex-direction: column;
+		li {
+			margin-bottom: 1.2rem;
+			border-bottom: 1px solid #555;
+			&:last-child {
+				border: none;
+				padding: 0;
+			}
+		}
+		h3,p {
+			margin-bottom: 0.5rem;
+		}
+	}
+
+	.footer-content {
+		flex-direction: column-reverse;
+	}
+
+
+}
+
+@media screen and (max-width: 320px) {}
+
+/* Mobile First Method */
+
+@media screen and (min-width: 320px) {}
+
+@media screen and (min-width: 576px) {}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 992px) {}
